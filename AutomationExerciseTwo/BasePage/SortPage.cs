@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using System.Collections.Generic;
 
 namespace AutomationExerciseTwo.BasePage
 {
@@ -13,6 +14,7 @@ namespace AutomationExerciseTwo.BasePage
         public IWebElement apparelAndAccessoriesShoesLink => webDriver.FindElement(By.XPath("//*[@id=\"maincontainer\"]/div/div/div/div/ul/li[1]/a"));
         public IWebElement sortDropDownList => webDriver.FindElement(By.Id("sort"));
         public IWebElement sortLowToHighPriceOptionSelectedDropDownList => webDriver.FindElement(By.XPath("//*[@id=\"sort\"]/option[4]"));
+        public IList<IWebElement> priceList => webDriver.FindElements(By.ClassName("oneprice"));
 
     }
 }

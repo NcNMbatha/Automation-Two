@@ -1,6 +1,5 @@
 ﻿using AutomationExerciseTwo.BasePage;
 using NUnit.Framework;
-using OpenQA.Selenium;
 
 namespace AutomationExerciseTwo.Test
 {
@@ -9,7 +8,7 @@ namespace AutomationExerciseTwo.Test
     {
 
         [Test]
-        public void Given_YouAreInHomePage_When_ClickingFaceBookIcon_Then_ConfirmNewTabOpenEqualTrue()
+        public void Given_YouAreInHomePage_When_ClickingFaceBookIcon_Then_ConfirmNewTabOpenEqualsTrue()
         {
             bool newTabOpened = false;
 
