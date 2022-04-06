@@ -12,7 +12,7 @@ namespace AutomationExerciseTwo.Test
         {
             AppPages.FacebookPage.facebookIconLink.Click();
             AppPages.FacebookPage.webDriver.SwitchTo().Window(AppPages.FacebookPage.webDriver.WindowHandles[1]);
-            bool newTabOpened = AppPages.FacebookPage.facebookPageLabele.Text.Contains("Facebook");
+            bool newTabOpened = AppPages.FacebookPage.facebookHeaderLabel.Text.Contains("Facebook");
             AppPages.FacebookPage.webDriver.SwitchTo().Window(AppPages.FacebookPage.webDriver.WindowHandles[0]);
 
             Assert.IsTrue(newTabOpened);
