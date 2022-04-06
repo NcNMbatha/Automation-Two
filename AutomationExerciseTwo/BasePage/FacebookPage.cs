@@ -11,6 +11,7 @@ namespace AutomationExerciseTwo.BasePage
         }
 
         public IWebElement facebookIconLink => webDriver.FindElement(By.ClassName("facebook"));
+        public IWebElement facebookPageLabele => webDriver.FindElement(By.ClassName("_8eso"));
 
     }
 

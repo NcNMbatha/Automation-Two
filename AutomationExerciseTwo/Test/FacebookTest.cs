@@ -10,21 +10,10 @@ namespace AutomationExerciseTwo.Test
         [Test]
         public void Given_YouAreInHomePage_When_ClickingFaceBookIcon_Then_ConfirmNewTabOpenEqualsTrue()
         {
-            bool newTabOpened = false;
-
             AppPages.FacebookPage.facebookIconLink.Click();
             AppPages.FacebookPage.webDriver.SwitchTo().Window(AppPages.FacebookPage.webDriver.WindowHandles[1]);
-
-            if (AppPages.FacebookPage.webDriver.CurrentWindowHandle.Equals(AppPages.FacebookPage.webDriver.WindowHandles[1]))
-            {
-                newTabOpened = true;
-                AppPages.FacebookPage.webDriver.SwitchTo().Window(AppPages.FacebookPage.webDriver.WindowHandles[0]);
-
-                if (!AppPages.FacebookPage.webDriver.CurrentWindowHandle.Equals(AppPages.FacebookPage.webDriver.WindowHandles[0]))
-                {
-                    newTabOpened = false;
-                }
-            }
+            bool newTabOpened = AppPages.FacebookPage.facebookPageLabele.Text.Contains("Facebook");
+            AppPages.FacebookPage.webDriver.SwitchTo().Window(AppPages.FacebookPage.webDriver.WindowHandles[0]);
 
             Assert.IsTrue(newTabOpened);
         }
