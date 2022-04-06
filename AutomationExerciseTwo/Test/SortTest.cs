@@ -65,7 +65,7 @@ namespace AutomationExerciseTwo.Test
             Assert.IsTrue(isSortedDescending);
         }
 
-        public List<Double>  RemoveCurrencySymbol()
+        public List<Double> RemoveCurrencySymbol()
         {
             string priceText = string.Empty;
             List<Double> priceList = new List<double>();

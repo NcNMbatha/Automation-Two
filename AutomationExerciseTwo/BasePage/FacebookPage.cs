@@ -10,7 +10,7 @@ namespace AutomationExerciseTwo.BasePage
             this.webDriver = webDriver;
         }
 
-        public IWebElement facebookIconLink => webDriver.FindElement(By.XPath("/html/body/div/header/div[2]/div/div[4]/div/div/a[1]"));
+        public IWebElement facebookIconLink => webDriver.FindElement(By.ClassName("facebook"));
 
     }
 
