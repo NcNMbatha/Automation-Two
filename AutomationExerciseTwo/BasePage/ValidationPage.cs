@@ -23,5 +23,6 @@ namespace AutomationExerciseTwo.BasePage
         public IWebElement currencyDropDownDollarLink => webDriver.FindElement(By.XPath("//a[contains(.,'$ US Dollar')]"));
         public IWebElement currencyDropDownPoundLink => webDriver.FindElement(By.XPath("//a[contains(.,'£ Pound')]"));
         public IWebElement shoePriceLabel => webDriver.FindElement(By.ClassName("oneprice"));
+
     }
 }
